@@ -1,0 +1,101 @@
+# ----------------------
+# Python
+# ----------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+pip-selfcheck.json
+
+# Testing
+.pytest_cache/
+.tox/
+.nox/
+coverage.xml
+*.cover
+.hypothesis/
+.coverage
+.coverage.*
+
+# mypy
+.mypy_cache/
+.dmypy.json
+
+# ----------------------
+# DBT
+# ----------------------
+agrotest/dbt_packages/
+agrotest/target/
+agrotest/logs/
+
+# ----------------------
+# macOS
+# ----------------------
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Icon must end with two \r
+Icon
+
+# Thumbnails
+._*
+
+# Files that might appear on external disks
+.Spotlight-V100
+.Trashes
+
+# macOS metadata
+ehthumbs.db
+Thumbs.db
+
+# ----------------------
+# IDE
+# ----------------------
+.idea/
+.vscode/
+
+# ----------------------
+# dotenv
+# ----------------------
+.env
+.env.*
+!.env.example
+
+# Logs
+logs/
+!logs/.gitkeep
+*.log
+
+# Custom
+notes.txt
+play.py
