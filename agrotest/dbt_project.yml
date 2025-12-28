@@ -25,3 +25,7 @@ models:
       +materialized: view
     dm:
       +materialized: view
+
+seeds:
+  agrotest:
+    +schema: stg

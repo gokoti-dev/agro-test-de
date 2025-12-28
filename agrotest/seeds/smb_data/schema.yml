@@ -1,0 +1,43 @@
+version: 2
+
+seeds:
+  - name: smb
+    config:
+      delimiter: ";"
+      quote_columns: false
+      column_types:
+        tin: text
+        reg_number: text
+        category: text
+        org_name: text
+        org_short_name: text
+        activity_code_main: text
+        region: text
+        area: text
+        settlement: text
+        settlement_type: text
+        oktmo: text
+        lat: text
+        lon: text
+        address_raw: text
+        start_date: text
+        end_date: text
+
+  - name: revexp
+    config:
+      delimiter: ";"
+      quote_columns: false
+      column_types:
+        tin: text
+        year: text
+        revenue: text
+        expenditure: text
+
+  - name: empl
+    config:
+      delimiter: ";"
+      quote_columns: false
+      column_types:
+        tin: text
+        year: text
+        employees_count: text
