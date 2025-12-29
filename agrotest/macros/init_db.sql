@@ -6,6 +6,7 @@
     create schema if not exists dds;
     create schema if not exists cdm;
     create schema if not exists dm;
+    create schema if not exists snps;
   {% endset %}
 
   {% do run_query(sql) %}

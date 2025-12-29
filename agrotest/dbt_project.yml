@@ -15,16 +15,14 @@ clean-targets:
 
 models:
   agrotest:
-    stg:
-      +materialized: table
     ods:
       +materialized: table
     dds:
       +materialized: table
     cdm:
-      +materialized: view
+      +materialized: table
     dm:
-      +materialized: view
+      +materialized: table
 
 seeds:
   agrotest:

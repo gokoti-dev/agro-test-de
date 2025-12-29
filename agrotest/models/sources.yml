@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: stg
+    schema: stg
+    tables:
+      - name: smb
+      - name: revexp
+      - name: empl
