@@ -102,8 +102,26 @@ dbt run-operation create_snps_parents
 dbt seed --full-refresh
 
 dbt run -s ods --vars '{"input_data_date":"<любая дата>"}'
-dbt run -s dds
 ```
+
+Далее - два варианта исполнения. 
+Либо последовательно по каждому слою - от ods до dm:
+
+```bash
+
+dbt run -s ods --vars '{"input_data_date":"<дата забора csv из источника>"}'
+dbt run -s dds
+dbt run -s cdm
+dbt run -s dm
+```
+
+Либо запускаем cdm.org_year_profile модель вместе с ее upstream и downstream.
+
+```bash
+
+dbt run -s +cdm.org_year_profile+ --vars '{"input_data_date":"<дата забора csv из источника>"}'
+```
+
 
 ---
 
@@ -112,4 +130,4 @@ dbt run -s dds
 - Проект уже инициализирован — достаточно склонировать репозиторий и настроить `profiles.yml`
 - `init_db` и `create_snps_parents` — идемпотентные операции, безопасные для повторного запуска
 - `input_data_date` задаёт логическую дату обработки данных для слоя ODS
-- Порядок выполнения слоёв фиксирован: **ODS → DDS**
+- Порядок выполнения слоёв фиксирован: **ODS → DDS -> CDM -> DM**
