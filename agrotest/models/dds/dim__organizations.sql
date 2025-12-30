@@ -1,6 +1,10 @@
 {{ config(
     materialized='table',
-    schema='dds'
+    schema='dds',
+    post_hook="
+       alter table {{ this }}
+       add primary key (org_sk)
+    "
 ) }}
 
 with tins_data as (

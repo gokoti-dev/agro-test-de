@@ -1,6 +1,10 @@
 {{ config(
     materialized='table',
-    schema='dds'
+    schema='dds',
+    post_hook="
+       alter table {{ this }}
+       add primary key (geo_sk)
+    "
 ) }}
 
 with uniq_geo_data as (
